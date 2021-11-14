@@ -98,7 +98,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +5 } },
 	{ MODKEY|ShiftMask,             XK_minus,  setgaps,        {.i = GAP_RESET } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = GAP_TOGGLE} },
-	{ Mod4Mask,                     XK_space,  spawn,          SHCMD("setxkbmap -query | grep -q 'us' && setxkbmap ru || setxkbmap us; refbar.sh") },
+	{ Mod4Mask,                     XK_space,  spawn,          SHCMD("refbar.sh") },
 	{ MODKEY,                       XK_F12,    spawn,          SHCMD("pactl set-sink-volume 0 +5%; refbar.sh") },
 	{ MODKEY,                       XK_F11,    spawn,          SHCMD("pactl set-sink-volume 0 -5%; refbar.sh") },
 	{ MODKEY,                       XK_F9,     spawn,          {.v = mutevol } },
