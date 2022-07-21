@@ -8,8 +8,8 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int horizpadbar        = -5;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 2;        /* vertical padding for statusbar */
-static const char *fonts[]          = { "Roboto Mono:size=12:antialias=true", "Material Design Icons:size=12:antialias=true" };
-static const char dmenufont[]       = "Roboto Mono:size=12:antialias=true";
+static const char *fonts[]          = { "SpaceMono Nerd Font:size=12:antialias=true:autohint=true" };
+static const char dmenufont[]       = "SpaceMono Nerd Font:size=12:antialias=true:autohint=true";
 static const char dmenulh[]         = "8";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
