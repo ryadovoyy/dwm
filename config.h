@@ -6,7 +6,7 @@ static const Gap default_gap        = {.isgap = 1, .realgap = 10, .gappx = 10};
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int horizpadbar        = -5;        /* horizontal padding for statusbar */
+static const int horizpadbar        = -5;       /* horizontal padding for statusbar */
 static const int vertpadbar         = 2;        /* vertical padding for statusbar */
 static const char *fonts[]          = { "JetBrainsMonoNL Nerd Font:size=12:antialias=true:autohint=true" };
 static const char dmenufont[]       = "JetBrainsMonoNL Nerd Font:size=12:antialias=true:autohint=true";
@@ -18,10 +18,10 @@ static char selfgcolor[]            = "#eeeeee";
 static char selbordercolor[]        = "#005577";
 static char selbgcolor[]            = "#005577";
 static char *colors[][3] = {
-       /*                  fg           bg           border   */
-       [SchemeNorm]    = { normfgcolor, normbgcolor, normbordercolor },
-       [SchemeSel]     = { selfgcolor,  selbgcolor,  selbordercolor  },
-       [SchemeInfoSel] = { selfgcolor,  selfgcolor,  selbordercolor  },
+	/*                  fg           bg           border   */
+	[SchemeNorm]    = { normfgcolor, normbgcolor, normbordercolor },
+	[SchemeSel]     = { selfgcolor,  selbgcolor,  selbordercolor  },
+	[SchemeInfoSel] = { selfgcolor,  selfgcolor,  selbordercolor  },
 };
 
 /* tagging */
@@ -35,7 +35,6 @@ static const Rule rules[] = {
 	/* class              instance    title       tags mask     isfloating   monitor */
 	{ "Brave-browser",    NULL,       NULL,       1 << 0,       0,           -1 },
 	{ "TelegramDesktop",  NULL,       NULL,       1 << 2,       0,           -1 },
-	{ "discord",          NULL,       NULL,       1 << 2,       0,           -1 },
 };
 
 /* layout(s) */
@@ -99,9 +98,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +5 } },
 	{ MODKEY|ShiftMask,             XK_minus,  setgaps,        {.i = GAP_RESET } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = GAP_TOGGLE} },
-	{ Mod4Mask,                     XK_space,  spawn,          SHCMD("refbar.sh") },
-	{ MODKEY,                       XK_F12,    spawn,          SHCMD("pactl set-sink-volume 0 +5%; refbar.sh") },
-	{ MODKEY,                       XK_F11,    spawn,          SHCMD("pactl set-sink-volume 0 -5%; refbar.sh") },
+	{ Mod4Mask,                     XK_space,  spawn,          SHCMD("refbar") },
+	{ MODKEY,                       XK_F12,    spawn,          SHCMD("pactl set-sink-volume 0 +5%; refbar") },
+	{ MODKEY,                       XK_F11,    spawn,          SHCMD("pactl set-sink-volume 0 -5%; refbar") },
 	{ MODKEY,                       XK_F9,     spawn,          {.v = mutevol } },
 	{ 0,                            XK_Print,  spawn,          {.v = flameshot } },
 	TAGKEYS(                        XK_1,                      0)
