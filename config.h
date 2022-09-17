@@ -67,7 +67,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-h", dmenulh, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *emacscmd[] = { "emacsclient", "-c", NULL };
+static const char *emacscmd[] = { "emacsclient", "-ca", "emacs", NULL };
 static const char *mutevol[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
 static const char *flameshot[] = { "flameshot", "gui", NULL };
 
