@@ -2,6 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const int borderpxbar        = 2;        /* border pixel of statusbar */
 static const Gap default_gap        = {.isgap = 1, .realgap = 10, .gappx = 10};
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -18,10 +19,11 @@ static char selfgcolor[]            = "#eeeeee";
 static char selbordercolor[]        = "#005577";
 static char selbgcolor[]            = "#005577";
 static char *colors[][3] = {
-	/*                  fg           bg           border   */
-	[SchemeNorm]    = { normfgcolor, normbgcolor, normbordercolor },
-	[SchemeSel]     = { selfgcolor,  selbgcolor,  selbordercolor  },
-	[SchemeInfoSel] = { selfgcolor,  selfgcolor,  selbordercolor  },
+	/*                    fg               bg               border   */
+	[SchemeNorm]      = { normfgcolor,     normbgcolor,     normbordercolor },
+	[SchemeSel]       = { selfgcolor,      selbgcolor,      selbordercolor  },
+	[SchemeInfoSel]   = { normbgcolor,     normbgcolor,     selbordercolor  },
+	[SchemeBarBorder] = { normbordercolor, normbordercolor, normbordercolor },
 };
 
 /* tagging */
@@ -65,7 +67,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-h", dmenulh, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-h", dmenulh, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *emacscmd[] = { "emacsclient", "-ca", "emacs", NULL };
 static const char *mutevol[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
