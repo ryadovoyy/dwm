@@ -71,6 +71,8 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *emacscmd[] = { "emacsclient", "-ca", "emacs", NULL };
 static const char *mutevol[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
+static const char *dunstclose[] = { "dunstctl", "close", NULL };
+static const char *dunsthist[] = { "dunstctl", "history-pop", NULL };
 static const char *flameshot[] = { "flameshot", "gui", NULL };
 
 static Key keys[] = {
@@ -108,6 +110,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_F12,    spawn,          SHCMD("pactl set-sink-volume 0 +5%; refbar") },
 	{ MODKEY,                       XK_F11,    spawn,          SHCMD("pactl set-sink-volume 0 -5%; refbar") },
 	{ MODKEY,                       XK_F9,     spawn,          {.v = mutevol } },
+	{ MODKEY,                       XK_n,      spawn,          {.v = dunstclose } },
+	{ MODKEY|ShiftMask,             XK_n,      spawn,          {.v = dunsthist } },
 	{ 0,                            XK_Print,  spawn,          {.v = flameshot } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
