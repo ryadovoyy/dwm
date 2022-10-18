@@ -36,8 +36,8 @@ static const Rule rules[] = {
 	 */
 	/* class              instance    title       tags mask     isfloating   monitor */
 	{ "Brave-browser",    NULL,       NULL,       1 << 0,       0,           -1 },
-	{ "St",               NULL,       NULL,       1 << 1,       0,           -1 },
-	{ "Emacs",            NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "Emacs",            NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "St",               NULL,       NULL,       1 << 2,       0,           -1 },
 	{ "TelegramDesktop",  NULL,       NULL,       1 << 2,       0,           -1 },
 };
 
@@ -73,6 +73,7 @@ static const char *emacscmd[] = { "emacsclient", "-ca", "emacs", NULL };
 static const char *mutevol[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
 static const char *dunstclose[] = { "dunstctl", "close", NULL };
 static const char *dunsthist[] = { "dunstctl", "history-pop", NULL };
+static const char *lockscreen[] = { "betterlockscreen", "-l", NULL };
 static const char *flameshot[] = { "flameshot", "gui", NULL };
 
 static Key keys[] = {
@@ -112,6 +113,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_F9,     spawn,          {.v = mutevol } },
 	{ MODKEY,                       XK_n,      spawn,          {.v = dunstclose } },
 	{ MODKEY|ShiftMask,             XK_n,      spawn,          {.v = dunsthist } },
+	{ MODKEY,                       XK_s,      spawn,          {.v = lockscreen } },
 	{ 0,                            XK_Print,  spawn,          {.v = flameshot } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
