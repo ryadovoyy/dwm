@@ -74,6 +74,9 @@ static const char *mutevol[] = { "pactl", "set-sink-mute", "0", "toggle", NULL }
 static const char *dunstclose[] = { "dunstctl", "close", NULL };
 static const char *dunsthist[] = { "dunstctl", "history-pop", NULL };
 static const char *lockscreen[] = { "betterlockscreen", "-l", NULL };
+static const char *spotifytoggle[] = { "playerctl", "play-pause", "-p", "spotify", NULL };
+static const char *spotifynext[] = { "playerctl", "next", "-p", "spotify", NULL };
+static const char *spotifyprev[] = { "playerctl", "previous", "-p", "spotify", NULL };
 static const char *flameshot[] = { "flameshot", "gui", NULL };
 
 static Key keys[] = {
@@ -114,6 +117,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_n,      spawn,          {.v = dunstclose } },
 	{ MODKEY|ShiftMask,             XK_n,      spawn,          {.v = dunsthist } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = lockscreen } },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = spotifytoggle } },
+	{ MODKEY,                       XK_Right,  spawn,          {.v = spotifynext } },
+	{ MODKEY,                       XK_Left,   spawn,          {.v = spotifyprev } },
 	{ 0,                            XK_Print,  spawn,          {.v = flameshot } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
