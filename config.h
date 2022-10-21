@@ -36,8 +36,8 @@ static const Rule rules[] = {
 	 */
 	/* class              instance    title       tags mask     isfloating   monitor */
 	{ "Brave-browser",    NULL,       NULL,       1 << 0,       0,           -1 },
-	{ "Emacs",            NULL,       NULL,       1 << 1,       0,           -1 },
-	{ "St",               NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "St",               NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "Emacs",            NULL,       NULL,       1 << 2,       0,           -1 },
 	{ "TelegramDesktop",  NULL,       NULL,       1 << 2,       0,           -1 },
 };
 
