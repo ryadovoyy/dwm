@@ -9,8 +9,8 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int horizpadbar        = -5;       /* horizontal padding for statusbar */
 static const int vertpadbar         = 2;        /* vertical padding for statusbar */
-static const char *fonts[]          = { "JetBrainsMonoNL Nerd Font:size=12:antialias=true:autohint=true" };
-static const char dmenufont[]       = "JetBrainsMonoNL Nerd Font:size=12:antialias=true:autohint=true";
+static const char *fonts[]          = { "JetBrainsMonoNL Nerd Font:pixelsize=15:antialias=true:autohint=true" };
+static const char dmenufont[]       = "JetBrainsMonoNL Nerd Font:pixelsize=15:antialias=true:autohint=true";
 static const char dmenulh[]         = "8";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
